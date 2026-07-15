@@ -75,12 +75,12 @@ if uploaded_file is not None:
 
     st.markdown("---")
 
-    if label == "Healthy":
-        st.success(f"✅ Prediction: {label}")
+  if label == "Healthy":
+        st.success(f"✅ Prediction: {label} — {score:.2f}%")
     elif label == "Parkinson's":
-        st.warning(f"⚠️ Prediction: {label}")
+        st.warning(f"⚠️ Prediction: {label} — {score:.2f}%")
     else:
-        st.info("❓ Prediction: Uncertain")
+        st.info(f"❓ Prediction: Uncertain — {score:.2f}%")
         st.write("Confidence too low — recommend clinical review")
 
     st.metric(label="Confidence", value=f"{score:.2f}%")
