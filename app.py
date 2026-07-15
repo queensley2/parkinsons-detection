@@ -75,7 +75,7 @@ if uploaded_file is not None:
 
     st.markdown("---")
 
-  if label == "Healthy":
+    if label == "Healthy":
         st.success(f"✅ Prediction: {label} — {score:.2f}%")
     elif label == "Parkinson's":
         st.warning(f"⚠️ Prediction: {label} — {score:.2f}%")
